@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Préstamos</title>
+</head>
+<body>
+    <h1>Historial de Préstamos</h1>
+    <ul>
+        {% for p in prestamos %}
+            <li>ID préstamo: {{ p[0] }} | Usuario: {{ p[1] }} | Libro: {{ p[2] }} | Fecha: {{ p[3] }} | Devuelto: {{ p[4] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

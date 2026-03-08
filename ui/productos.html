@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productos</title>
+</head>
+<body>
+  <h2>Gestión de Productos</h2>
+  <form action="/agregar_producto" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="number" name="precio" placeholder="Precio" required>
+    <input type="number" name="stock" placeholder="Stock" required>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <h3>Lista de Productos</h3>
+  <ul>
+    {% for p in productos %}
+      <li>{{ p[1] }} - ${{ p[2] }} - Stock: {{ p[3] }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

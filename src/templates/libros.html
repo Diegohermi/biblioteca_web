@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Libros</title>
+</head>
+<body>
+    <h1>Catálogo de Libros</h1>
+    <ul>
+        {% for l in libros %}
+            <li>{{ l[1] }} - {{ l[2] }} ({{ l[3] }}, {{ l[4] }}) 
+                {% if l[5] == 1 %} Disponible {% else %} Prestado {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>
